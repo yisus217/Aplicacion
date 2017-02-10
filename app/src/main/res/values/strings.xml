@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Brand</string>
+    //login
+    <string name="textoLogin">Inicio de Sesión</string>
+    <string name="botonLogin">Iniciar Sesión</string>
+    <string name="textoRegistrado">¿No tiene cuenta? Registrese aquí</string>
+
+    //login y registro
+    <string name="hintUsuario">Ingrese Usuario o Correo</string>
+    <string name="hintContraseña">Ingrese Contraseña</string>
+    <string name="versionApp">v1.0.1</string>
+
+    //registro
+    <string name="textoRegister">Registro de Cuenta</string>
+    <string name="botonRegister">Registrar</string>
+    <string name="textoLogeado">¿Ya tiene cuenta? Inicie sesión aquí</string>
+
+    //perfilactividad
+    <string name="nombreEditText">Escriba su nombre completo</string>
+    <string name="direccionEditText">Escriba su dirección</string>
+    <string name="botonGuardar">Guardar</string>
+    <string name="botonLogout">Cerrar Sesión</string>
+</resources>

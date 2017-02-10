@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "253026026623",
+    "firebase_url": "https://smartsecurityapp.firebaseio.com",
+    "project_id": "smartsecurityapp",
+    "storage_bucket": "smartsecurityapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253026026623:android:33612be471bd1e13",
+        "android_client_info": {
+          "package_name": "the.smartsecurity.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "253026026623-valv4u2b3jfo83811f8467kk1drbrfvd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "the.smartsecurity.app",
+            "certificate_hash": "C5AAF12DA9BE87F8F0D7E9DC6B4E011B58DC3AEC"
+          }
+        },
+        {
+          "client_id": "253026026623-k0ekdih0sjkkinct0s5cno66j3tkv221.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1f4WBi4TtlZClrL1ruceUZdTW0mo4IJ4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "253026026623-k0ekdih0sjkkinct0s5cno66j3tkv221.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/grisBajo">
+
+    <LinearLayout
+        android:background="@color/blanco"
+        android:padding="30dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="160dp">
+
+        <TextView
+            android:text="@string/textoLogin"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/common_google_signin_btn_text_light_pressed"
+            android:textSize="22sp"
+            android:fontFamily="sans-serif-condensed"
+            tools:ignore="HardcodedText,UnusedAttribute"
+            android:layout_marginBottom="15dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:id="@+id/textoUsuario"
+            android:hint="@string/hintUsuario"
+            android:layout_marginBottom="15dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/textoContrasena"
+            android:hint="@string/hintContraseña"
+            android:fontFamily="sans-serif"
+            tools:targetApi="jelly_bean"
+            android:selectAllOnFocus="false"
+            android:layout_marginBottom="15dp" />
+
+        <Button
+            android:text="@string/botonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/botonLogin"
+            android:textColor="@android:color/white"
+            android:background="?attr/actionModeSplitBackground"
+            android:layout_marginBottom="15dp" />
+
+        <TextView
+            android:textAlignment="center"
+            android:text="@string/textoRegistrado"
+            android:id="@+id/textoRegistrado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_dark" />
+
+    </LinearLayout>
+
+    <TextView
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/editText13"
+        android:text="@string/versionApp"
+        android:textColor="@color/grisAlto"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp" />
+
+</RelativeLayout>
