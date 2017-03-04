@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Brand</string>
+
+    //primera actividad
+    <string name="textoIrLogin">Iniciar Sesión</string>
+    <string name="botonIrRegistroCliente">Registrarse como Cliente</string>
+    <string name="botonIrRegistroServicio">Registrarse como Servicio</string>
+
     //login
     <string name="textoLogin">Inicio de Sesión</string>
     <string name="botonLogin">Iniciar Sesión</string>

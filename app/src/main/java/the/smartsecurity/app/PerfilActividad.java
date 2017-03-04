@@ -30,7 +30,8 @@ public class PerfilActividad extends AppCompatActivity implements View.OnClickLi
     private EditText nombreEditText;
     private EditText direccionEditText;
     private DatabaseReference databaseReference;
-    private Firebase baseDatos;
+    private FirebaseDatabase baseDatos;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +39,8 @@ public class PerfilActividad extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_perfil_actividad);
 
         autFireBase = FirebaseAuth.getInstance();
-        Firebase.setAndroidContext(this);
-        baseDatos = new Firebase("https://smartsecurityapp.firebaseio.com/");
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+        baseDatos = FirebaseDatabase.getInstance();
 
 
         if(autFireBase.getCurrentUser() == null){
@@ -47,7 +48,6 @@ public class PerfilActividad extends AppCompatActivity implements View.OnClickLi
             startActivity(new Intent(this, PrimeraActividad.class));
         }
 
-        databaseReference = FirebaseDatabase.getInstance().getReference();
         //inicializando views
         direccionEditText = (EditText)findViewById(R.id.direccionEditText);
         nombreEditText = (EditText)findViewById(R.id.nombreEditText);
@@ -59,24 +59,6 @@ public class PerfilActividad extends AppCompatActivity implements View.OnClickLi
         textViewUsuarioCorreo = (TextView)findViewById(R.id.textViewUsuarioCorreo);
         textViewUsuarioCorreo.setText("Bienvenido "+usuario.getEmail());
 
-        baseDatos.addValueEventListener(new ValueEventListener() {
-           @Override
-           public void onDataChange(DataSnapshot dataSnapshot) {
-               Map<String, String> mapaBaseDatos = dataSnapshot.getValue(Map.class);
-
-               FirebaseUser usuario = autFireBase.getCurrentUser();
-
-               String Direccion = usuario.getEmail();
-
-
-               direccionEditText.setText(Direccion);
-           }
-
-           @Override
-           public void onCancelled(FirebaseError firebaseError) {
-
-           }
-        });
 
         botonLogout = (Button)findViewById(R.id.botonLogout);
         //agregando listener a los botones
@@ -88,11 +70,11 @@ public class PerfilActividad extends AppCompatActivity implements View.OnClickLi
         String nombre = nombreEditText.getText().toString().trim();
         String direccion = direccionEditText.getText().toString().trim();
 
-        InformacionUsuario informacionUsuario = new InformacionUsuario(nombre, direccion);
+        InformacionUsuario informacionUsuario = new InformacionUsuario(direccion, nombre);
         FirebaseUser usuario = autFireBase.getCurrentUser();
 
         Toast.makeText(this, "Información Guardada", Toast.LENGTH_SHORT).show();
-        databaseReference.child(usuario.getUid()).setValue(informacionUsuario);
+        databaseReference.child("clientes").child(usuario.getUid()).setValue(informacionUsuario);
     }
 
     @Override
@@ -107,6 +89,9 @@ public class PerfilActividad extends AppCompatActivity implements View.OnClickLi
             guardarInformacionUsuario();
         }
     }
+
+
 }
+
 
 
